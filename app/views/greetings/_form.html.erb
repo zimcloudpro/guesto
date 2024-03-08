@@ -1,5 +1,12 @@
-<%= bootstrap_form_with(model: greeting) do |form| %>
-    <%= form.text_field :name %>
-    <%= form.text_area :message %>
-    <%= form.submit %>
-<% end %>
+<div class="card" data-turbo="false">
+  <div class="card-body">
+    <h5 class="card-title">Send me a message!</h5>
+    <%= bootstrap_form_with(model: greeting) do |form| %>
+      <%= form.text_field :name %>
+      <%= form.text_area :message %>
+      <div class="card-actions">
+        <%= form.submit class: 'btn btn-outline-primary w-100' %>
+      </div>
+    <% end %>
+  </div>
+</div>
